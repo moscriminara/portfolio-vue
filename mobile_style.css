@@ -80,4 +80,7 @@
     .overflowBox {
         justify-content: left;
     }
+    .creatorsPics {
+        width: 70%;
+    }
 }
