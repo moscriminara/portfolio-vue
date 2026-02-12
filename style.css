@@ -1,0 +1,208 @@
+body {
+    background-image: url("images/white_bg.avif");
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "generalfont";
+    src: url("./font/favourite.ttf");
+}
+
+.page{
+    display: block;
+}
+
+
+.topbar {
+    position: fixed;
+    background-color: rgb(105, 105, 105);
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.4s ease;
+}
+.topbarUi {
+    position: fixed;
+    width: 100%;
+    top: 13px;
+}
+.topbarContent {
+    position: relative;
+    font-family: "generalfont";
+    font-size: 25px;
+    color: white;
+    margin-left: 6%;
+    left: 20px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+.topbarContent:hover {
+    color: rgb(197, 197, 197);
+    font-size: 30px;
+}
+.topbarLogo {
+    position: fixed;
+    top: -12px;
+    transform-origin: center;
+    transform: scale(0.45);
+    z-index: 2000;
+    transition: 0.4s ease;
+}
+.topbarLogo:hover {
+    filter:contrast(180%);
+    transform: scale(0.52);
+}
+
+
+.content {
+    display: block;
+    font-family: "generalfont";
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    max-width: 60%;
+    line-height: 1.5;
+    margin: 0 auto;
+    word-wrap: break-word;
+    text-decoration: none;
+    cursor: default;
+}
+h1 {
+    font-family: "generalfont";
+    font-style: bold;
+    font-size: 80px;
+    font-weight: lighter;
+    text-align: center;
+    cursor: default;
+}
+.homeHeading {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    text-align: center;
+    margin-top: 24%;
+    font-family: "generalfont";
+    font-size: 30px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+.pics {
+    width: 30%;
+    margin: 3% 1%;
+    border: solid black 1px;
+}
+.creatorsPics {
+    width: 30%;
+    margin:5% auto;
+    border: solid black 1px;
+    transition: 0.4s ease;
+}
+.creatorsPics:hover {
+    width: 34%;
+}
+.productsPics {
+    width: 50%;
+    margin: 10% 1%;
+    transition: 0.4s ease;
+}
+.productsPics:hover {
+    width: 60%;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.overflowBox {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+.vtbox {
+    justify-content: center;
+    text-align: center;
+}
+
+
+input {
+    font-family: "generalfont";
+    font-size: 50px;
+    opacity: 0.8;
+    width: 50%;
+    height: 60px;
+    margin: 15% 0 4% 0;
+}
+button {
+    font-family: "generalfont";
+    font-size: 25px;
+    opacity: 0.8;
+    width: 60px;
+    height: 60px;
+    margin: 15% 0 4% 1%;
+}
+span {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+
+.emailEnter {
+    font-size: 40px;
+    width: 70%; 
+    margin-top: 5%;
+    padding: 1%;
+}
+textarea {
+    font-family: "generalfont";
+    font-size: 25px;
+    opacity: 0.8;
+    width: 70%;
+    margin-top: -3%;
+    resize: none;
+    padding: 1%;
+}
+.contactButton {
+    font-size: 20px;
+    width: 70%;
+    margin: 2% 0 0 0;
+}
+.notice {
+    display: block;
+    font-size: 30px;
+    font-family: "generalfont";
+    text-align: center;
+    max-width: 60%;
+    margin: 3% auto 0 auto;
+}
+.showHtml {
+    border: solid black 1px;
+    margin: 5% 1%;
+    overflow: auto;
+    font-size: 15px;
+}
+.showhtml::-webkit-scrollbar{
+    display: none;
+}
+
+
+.bruh {
+    display: block;
+    margin:auto auto 100% auto;
+}
+
+.fade-enter-active {
+    transition: all 0.8s ease;
+}
+.fade-leave-active {
+    transition: all 0.5s ease;
+}
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+    margin-right: 10%;
+}
+.fade-enter-to, .fade-leave-from {
+    opacity: 1;
+    margin-right: 0%;
+}

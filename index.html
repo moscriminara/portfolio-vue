@@ -1,0 +1,145 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile_style.css">
+    <link rel="icon" href="./images/home.png">
+    <title>
+        Super Useless Website
+    </title>
+</head>
+
+<body>
+<!--Navigation Bar-->
+    <div id="navigation">
+        <nav class="topbar">
+            <router-link to="/">
+                <img src="./images/home.png" class="topbarLogo">
+            </router-link>
+            <div class="topbarUi">
+                <router-link class="topbarContent" to="/achievements">Achievements</router-link>
+                <router-link class="topbarContent" to="/products">Products</router-link>
+                <router-link class="topbarContent" to="/creator">Creator</router-link>
+                <router-link class="topbarContent" to="/contact">Contact</router-link>
+                <router-link class="topbarContent" to="/source" style="margin-right: 30%;">Source</router-link>
+            </div>
+        </nav>
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+
+<!--Js Files & Vue Library--->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/source.js"></script>
+    <script src="./js/navigation.js"></script>
+
+<!--Home-->
+    <template id="homeTemplate">
+        <section class="page">
+            <div class="homeHeading">
+                <a>
+                    This is a Portfolio Website, very cool, and cool, and cool.
+                </a>
+                <br><br>
+                <a style="font-size:45px">
+                    "And Cool."
+                </a>
+            </div>
+        </section>
+    </template>
+
+<!--Achievements-->
+    <template id="achievementsTemplate">
+        <section class="page">
+            <h1><br><br>
+                ACHIEVEMENTS
+            </h1>
+            <a class="content">
+                ------Grok Academy------
+            </a>
+            <div class="overflowBox">
+                <img class="pics" src="./images/certificate1.png">
+                <img class="pics" src="./images/certificate2.png">
+                <img class="pics" src="./images/certificate3.png">
+            </div>
+            <br>
+            <a class="content">
+                ------Code Combat------
+            </a>
+            <div class="overflowBox">
+                <img class="pics" src="./images/certificate_codecombat1.png">
+                <img class="pics" src="./images/certificate_codecombat2.png">
+                <img class="pics" src="./images/certificate_codecombat3.png">
+            </div>
+            
+        </section>
+    </template>
+
+<!--Products-->
+    <template id="productsTemplate">
+        <section class="page">
+            <h1><br><br>
+                PRODUCTS
+            </h1>
+            <div class="box">
+                <router-link to="/products/weather">
+                    <img class="productsPics" src="./images/weather.png">
+                </router-link>
+            </div>
+        </section>
+    </template>
+
+<!--Products Projects-->
+    <!--Weather-->
+    <template id="weatherTemplate">
+        <section class="page">
+            <weather></weather>
+        </section>
+    </template>
+
+<!--Creator-->
+    <template id="creatorTemplate">
+        <section class="page">
+                    <section class="page">
+            <div>
+                <h1><br><br>
+                    CREATOR
+                </h1>
+            </div>
+
+            <div>
+                <div class="box">
+
+                    <div>
+                        <a href="https://discord.com/users/972505656647114802" target="_blank">
+                            <img src="./images/profile.png" class="creatorsPics">
+                        </a>
+                        <a class="content" style="margin:1% auto 10% auto">
+                            "WEICHEN"
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </template>
+
+<!--Contact-->
+    <template id="contactTemplate">
+        <section>
+            <contact></contact>
+        </section>
+    </template>
+
+<!--Source-->
+    <template id="sourceTemplate">
+        <section class="page">
+            <sources></sources>
+        </section>
+    </template>
+</body>
+</html>
